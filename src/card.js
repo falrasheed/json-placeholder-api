@@ -9,10 +9,12 @@ function Card({initial, name, username, website}) {
 
   return (
     <div className="card">
-      <h1>{initial}</h1>
-      <h2>{name}</h2>
-      <h3>{username}</h3>
-      <h4>{website}</h4>
+      <ul>
+        <li>{initial}</li>
+        <li>{name}</li>
+        <li>{username}</li>
+        <li>{website}</li>
+      </ul>
       <Button/>
     </div>
   );

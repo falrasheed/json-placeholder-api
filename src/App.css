@@ -1,19 +1,19 @@
 .app {
-  min-height: 100vh;
-  background: lightblue;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  min-height: 100vh;
+  background: gray;
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   border: 2px solid black;
   height: 300px;
   width: 200px;
   background: white;
   border-radius: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
 }
