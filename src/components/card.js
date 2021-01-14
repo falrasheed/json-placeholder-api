@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import Button from "./button";
 import '../App.css';
 import {CardList} from "./card-list/cardlist.component";
 
@@ -22,18 +21,7 @@ function Card () {
 
   return (
     <div>
-      <CardList name="Fahad">
-      {info.map(user =>{
-        return (
-          <ul className="ul" key = {user.id}>
-            <li className="avatar">{user.name[0]}</li>
-            <li className="name" >{user.name}</li>
-            <li className="username">@{user.username}</li>
-            <li className="website">{user.website}</li>
-            <Button/>
-          </ul>
-        )
-      })}
+      <CardList info = {info}>
       </CardList>
 
     </div>
