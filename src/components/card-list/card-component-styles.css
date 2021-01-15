@@ -1,0 +1,46 @@
+.card-list-container {
+  text-align: center;
+  border: 2px solid black;
+  height: 300px;
+  width: 200px;
+  background: ffc7c7;
+  border-radius: 15px;
+  border-width: 0.5px;
+}
+.avatar {
+  width: 90px;
+  height: 90px;
+  background-color: #EAEAEA;
+  border-radius: 50px;
+  margin: 15px;
+  text-align: center;
+  font-size: 69px;
+  font-weight: lighter;
+}
+.name {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 5px 0px 0px 5px;
+}
+.username {
+  font-size: 10px;
+  font-style: italic;
+  font-weight: bold;
+  color: gray;
+  margin: 5px 0px 0px 5px
+}
+.website {
+  font-size: 10px;
+  font-weight: bold;
+  color:#8CE9FF;
+  margin: 5px 0px 10px 5px;
+}
+.button {
+  height: 45px;
+  width: 160px;
+  border-radius: 10px;
+  border-width: 0px;
+  background-color:#4498FF;
+  color: white;
+  margin-top: 35px;
+}

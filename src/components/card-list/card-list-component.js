@@ -1,6 +1,6 @@
 import React from 'react';
-import './card-list.css';
-import {Render} from './card.component.js';
+import './card-list-styles.css';
+import {Render} from './card-component.js';
 import Button from "../button";
 
 export const CardList = props => {

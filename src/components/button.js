@@ -7,7 +7,7 @@ function Button(){
 
   return(
     <div>
-      <button onClick = {redirectButton}> More Details</button>
+      <button className="button" onClick = {redirectButton}> MORE DETAILS</button>
     </div>
   );
 }
