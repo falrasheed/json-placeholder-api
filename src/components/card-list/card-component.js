@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from "../button";
+import {Link} from 'react-router-dom';
 import './card-component-styles.css';
 
 export const Render = (props) => (
@@ -9,8 +9,10 @@ export const Render = (props) => (
             <li className="name" >{props.user.name}</li>
             <li className="username">@{props.user.username}</li>
             <li className="website">http://{props.user.website}</li>
-            <Button/>
           </ul>
+         <button className="button" key={props.user.id}>
+           <Link to={`/detailspage/${props.user.id}`}>MORE DETAILS</Link>
+         </button>
   </div>
 )
 

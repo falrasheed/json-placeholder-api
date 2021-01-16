@@ -15,7 +15,6 @@ function Details () {
     .then(items => items.json())
     .then(retrievedDetails => setItems(retrievedDetails));
   }
-  console.log(items);
 
   return (
      <div key={items.list}>
@@ -28,6 +27,6 @@ function Details () {
          </>
        ))}
      </div>
-   );
+   )
 }
 export default Details;
