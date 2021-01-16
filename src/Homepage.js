@@ -3,10 +3,8 @@ import './App.css';
 import {CardList} from "./components/card-list/card-list-component";
 
 function Card () {
-
   //stored info
   const [info, setInfo] = useState([]);
-
   useEffect(()=> {
     getInfo();
   }, []);

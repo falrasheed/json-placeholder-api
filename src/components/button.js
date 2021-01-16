@@ -1,15 +1,31 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {useState, useEffect} from 'react';
+import './card-list/card-component-styles.css';
 
 function Button(){
-  const redirectButton = () => {
-    console.log("hello");
-  };
+  useEffect(()=> {
+    fetchButtonId();
+  },[]);
+
+  const [ids, setItems] = useState([]);
+
+  const api_url = 'https://jsonplaceholder.typicode.com/users/'
+
+  const fetchButtonId = async () => {
+    await fetch(api_url)
+    .then(ids => ids.json())
+    .then(retrievedIds => setItems(retrievedIds));
+  }
 
   return(
-    <div>
-      <Link to="/detailspage" className="button" onClick = {redirectButton}> MORE DETAILS</Link>
-    </div>
+    <div key={ids.method}>
+       {ids.map(ids => (
+         <button key={ids.id}>
+           <Link to={`/detailspage/${ids.id}`}>{ids.id}</Link>
+         </button>
+       ))}
+     </div>
   );
 }
 
