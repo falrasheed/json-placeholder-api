@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 function Button(){
   const redirectButton = () => {
@@ -7,7 +8,7 @@ function Button(){
 
   return(
     <div>
-      <button className="button" onClick = {redirectButton}> MORE DETAILS</button>
+      <Link to="/detailspage" className="button" onClick = {redirectButton}> MORE DETAILS</Link>
     </div>
   );
 }

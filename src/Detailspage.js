@@ -1,9 +1,29 @@
 import React from 'react';
 
-const Details = () => (
-  <div>
-    Welcome to About Page
-  </div>
-)
+function Details () {
 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  return (
+     <div>
+       <h1>Welcome to About Page</h1>
+     </div>
+   );
+}
 export default Details;
