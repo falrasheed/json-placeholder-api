@@ -6,7 +6,7 @@ function Details () {
   const [data, setItems] = useState([]);
     useEffect(()=> {
     fetchDetails();
-  },[]);
+  },);
 
   const {id} = useParams ();
 //let {id} = useParams ();
