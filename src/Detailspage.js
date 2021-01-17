@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
 
 function Details () {
-  const [items, setItems] = useState([]);
+  const [data, setItems] = useState([]);
     useEffect(()=> {
     fetchDetails();
   },[]);
@@ -15,30 +15,25 @@ function Details () {
 
   const fetchDetails = async () => {
     await fetch(api_url)
-    .then(items => items.json())
+    .then(response => response.json())
     .then(retrievedDetails => setItems(retrievedDetails));
-    setItems(items);
 }
-console.log(items);
-
-
+console.log(data);
 
   return (
     <div className="detail-list">
-      {items.map((user) => (
-        <p key="user.name">{user.name}</p>
+      {data.map((user) => (
+        <>
+        <p>-name{user.name}</p>
+        <p>-username{user.username}</p>
+        <p>-email{user.email}</p>
+        <p>-phone{user.phone}</p>
+        <p>-company{user.company}</p>
+        <p>-website{user.website}</p>
+        <p>-address{user.address}</p>
+        </>
       ))}
     </div>
-     /*<div key={items.list}>
-       {items.map(item => (
-         <>
-         <p>-name:{' ' + item.name}</p>
-         <p>-username:{' ' + item.username}</p>
-         <p>-email:{' ' + item.email}</p>
-         <p>-phone:{' ' + item.phone}</p>
-         </>
-       ))}
-     </div>*/
    )
 }
 export default Details;
