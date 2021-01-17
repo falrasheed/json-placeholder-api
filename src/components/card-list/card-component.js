@@ -11,7 +11,7 @@ export const Render = (props) => (
             <li className="website">http://{props.user.website}</li>
           </ul>
          <button className="button" key={props.user.id}>
-           <Link to={`/detailspage/${props.user.id}`}>MORE DETAILS</Link>
+           <Link to={`/${props.user.id}`}>MORE DETAILS</Link>
          </button>
   </div>
 )

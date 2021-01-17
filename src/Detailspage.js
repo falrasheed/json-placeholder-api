@@ -1,23 +1,35 @@
 import React from 'react';
 import {useState, useEffect} from 'react';
+import {useParams} from 'react-router-dom';
 
 function Details () {
+  const [items, setItems] = useState([]);
     useEffect(()=> {
     fetchDetails();
   },[]);
 
-  const [items, setItems] = useState([]);
+  const {id} = useParams ();
+//let {id} = useParams ();
 
-  const api_url = 'https://jsonplaceholder.typicode.com/users/'
+  const api_url = `https://jsonplaceholder.typicode.com/users/${id}`
 
   const fetchDetails = async () => {
     await fetch(api_url)
     .then(items => items.json())
     .then(retrievedDetails => setItems(retrievedDetails));
-  }
+    setItems(items);
+}
+console.log(items);
+
+
 
   return (
-     <div key={items.list}>
+    <div className="detail-list">
+      {items.map((user) => (
+        <p key="user.name">{user.name}</p>
+      ))}
+    </div>
+     /*<div key={items.list}>
        {items.map(item => (
          <>
          <p>-name:{' ' + item.name}</p>
@@ -26,7 +38,7 @@ function Details () {
          <p>-phone:{' ' + item.phone}</p>
          </>
        ))}
-     </div>
+     </div>*/
    )
 }
 export default Details;
