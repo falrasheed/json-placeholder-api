@@ -27,6 +27,10 @@ function Details() {
 	};
 
 	const companyName = data && data.company ? data.company.name : null;
+	const companyStreet = ((data || {}).address || {}).street;
+	const companySuite = ((data || {}).address || {}).suite;
+	const companyCity = ((data || {}).address || {}).city;
+	const companyZipcode = ((data || {}).address || {}).zipcode;
 	return (
 		<div className='detail-list'>
 			<p>-name: {`${data.name}`}</p>
@@ -35,7 +39,13 @@ function Details() {
 			<p>-phone: {`${data.phone}`}</p>
 			<p>-company: {`${companyName}`}</p>
 			<p>-website: {`${data.website}`}</p>
-			<p>-address: {`${data.address}`}</p>
+			<p>
+				-address:
+				<li>street: {`${companyStreet}`}</li>
+				<li>suite: {`${companySuite}`}</li>
+				<li>city: {`${companyCity}`}</li>
+				<li>zipcode: {`${companyZipcode}`}</li>
+			</p>
 		</div>
 	);
 }
