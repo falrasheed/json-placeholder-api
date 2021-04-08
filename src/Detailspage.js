@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import './detailspage.css';
 
 function Details() {
 	const [data, setItems] = useState([]);
@@ -27,6 +28,11 @@ function Details() {
 	};
 
 	const companyName = data && data.company ? data.company.name : null;
+
+	// const getProperty = function (prop) {
+	// 	const prop = ((data || {}).address || {}).prop;
+	// };
+
 	const companyStreet = ((data || {}).address || {}).street;
 	const companySuite = ((data || {}).address || {}).suite;
 	const companyCity = ((data || {}).address || {}).city;
@@ -41,10 +47,12 @@ function Details() {
 			<p>-website: {`${data.website}`}</p>
 			<p>
 				-address:
-				<li>street: {`${companyStreet}`}</li>
-				<li>suite: {`${companySuite}`}</li>
-				<li>city: {`${companyCity}`}</li>
-				<li>zipcode: {`${companyZipcode}`}</li>
+				<ul className='ul-list'>
+					<li>street: {`${companyStreet}`}</li>
+					<li>suite: {`${companySuite}`}</li>
+					<li>city: {`${companyCity}`}</li>
+					<li>zipcode: {`${companyZipcode}`}</li>
+				</ul>
 			</p>
 		</div>
 	);
