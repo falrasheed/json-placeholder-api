@@ -1,48 +1,71 @@
 .card-list-container {
-  text-align: center;
-  border: 2px solid black;
-  height: 300px;
-  width: 200px;
-  background: ffc7c7;
-  border-radius: 15px;
-  border-width: 0.5px;
+	text-align: center;
+	/* border: 2px solid black; */
+	height: 300px;
+	width: 200px;
+	background: ffc7c7;
+	border-radius: 15px;
+	border-width: 0.5px;
+	transform-style: preserve-3d;
+	border-radius: 30px;
+	box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+	background: rgba(255, 255, 255, 0.1);
+	border-top: 1px solid rgba(255, 255, 255, 0.5);
+	border-left: 1px solid rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(5px);
+	overflow: hidden;
+}
+.card-list-container:hover {
+	transform: translateY(0px);
+	opacity: 1;
 }
 .avatar {
-  width: 90px;
-  height: 90px;
-  background-color: #EAEAEA;
-  border-radius: 50px;
-  margin: 15px;
-  text-align: center;
-  font-size: 69px;
-  font-weight: lighter;
+	width: 90px;
+	height: 90px;
+	background: rgb(34, 195, 169);
+	background: linear-gradient(
+		341deg,
+		rgba(34, 195, 169, 1) 0%,
+		rgba(45, 206, 253, 1) 100%
+	);
+	border-radius: 50px;
+	margin: 15px;
+	text-align: center;
+	font-size: 69px;
+	font-weight: lighter;
 }
 .name {
-  font-size: 12px;
-  font-weight: bold;
-  margin: 5px 0px 0px 5px;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 5px 0px 0px 5px;
+	color: whitesmoke;
 }
 .username {
-  font-size: 10px;
-  font-style: italic;
-  font-weight: bold;
-  color: gray;
-  margin: 5px 0px 0px 5px
+	font-size: 10px;
+	font-style: italic;
+	font-weight: bold;
+	color: whitesmoke;
+	margin: 5px 0px 0px 5px;
 }
 .website {
-  font-size: 10px;
-  font-weight: bold;
-  color:#8CE9FF;
-  margin: 5px 0px 10px 5px;
-  text-decoration: underline;
+	font-size: 10px;
+	font-weight: bold;
+	color: #8ce9ff;
+	margin: 5px 0px 10px 5px;
+	text-decoration: underline;
 }
 .button {
-  height: 45px;
-  width: 160px;
-  border-radius: 10px;
-  border-width: 0px;
-  background-color:#4498FF;
-  color: white;
-  margin-top: 35px;
-  text-decoration: none;
+	height: 40px;
+	width: 120px;
+	border: 1px solid white;
+	border-radius: 20px;
+	background-color: transparent;
+	color: white;
+	margin-top: 35px;
+	text-decoration: none;
+}
+.card-list-container .avatar .name .username .website .button {
+	padding: 20px;
+	text-align: center;
+	transition: 0.5s;
 }
