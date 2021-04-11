@@ -10,9 +10,6 @@ export const Render = (props) => (
 			<li className='username'>@{props.user.username}</li>
 			<li className='website'>http://{props.user.website}</li>
 		</ul>
-		{/* <button className='button' key={props.user.id}>
-			<Link to={`/${props.user.id}`}>MORE DETAILS</Link>
-		</button> */}
 		<Link to={`/${props.user.id}`}>
 			<button className='button' key={props.user.id}>
 				MORE DETAILS

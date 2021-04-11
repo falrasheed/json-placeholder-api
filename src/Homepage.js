@@ -25,6 +25,8 @@ function Card() {
 				backgroundPosition: 'center',
 				backgroundSize: 'cover',
 				backgroundRepeat: 'no-repeat',
+				overflow: 'hidden',
+				margin: 0,
 			}}
 		>
 			<CardList info={info}></CardList>

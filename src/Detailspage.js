@@ -10,16 +10,7 @@ function Details() {
 	});
 
 	const { id } = useParams();
-	//let {id} = useParams ();
-
 	const api_url = `https://jsonplaceholder.typicode.com/users/${id}`;
-
-	// const fetchDetails = async () => {
-	// 	await fetch(api_url)
-	// 		.then((response) => response.json())
-	// 		.then((retrievedDetails) => setItems(retrievedDetails));
-	// };
-	// console.log(data);
 
 	const fetchDetails = async function () {
 		await fetch(api_url)
@@ -28,15 +19,11 @@ function Details() {
 	};
 
 	const companyName = data && data.company ? data.company.name : null;
-
-	// const getProperty = function (prop) {
-	// 	const prop = ((data || {}).address || {}).prop;
-	// };
-
 	const companyStreet = ((data || {}).address || {}).street;
 	const companySuite = ((data || {}).address || {}).suite;
 	const companyCity = ((data || {}).address || {}).city;
 	const companyZipcode = ((data || {}).address || {}).zipcode;
+
 	return (
 		<div className='detail-list'>
 			<p>-name: {`${data.name}`}</p>

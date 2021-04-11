@@ -1,6 +1,5 @@
 .card-list-container {
 	text-align: center;
-	/* border: 2px solid black; */
 	height: 300px;
 	width: 200px;
 	background: ffc7c7;
@@ -14,10 +13,12 @@
 	border-left: 1px solid rgba(255, 255, 255, 0.5);
 	backdrop-filter: blur(5px);
 	overflow: hidden;
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 .card-list-container:hover {
-	transform: translateY(0px);
-	opacity: 1;
+	color: whitesmoke;
+	opacity: 0.9;
 }
 .avatar {
 	width: 90px;
@@ -57,12 +58,23 @@
 .button {
 	height: 40px;
 	width: 120px;
-	border: 1px solid white;
+	border: 1px solid whitesmoke;
 	border-radius: 20px;
 	background-color: transparent;
-	color: white;
+	color: whitesmoke;
 	margin-top: 35px;
 	text-decoration: none;
+	font-size: 12px;
+}
+button:hover {
+	background-color: #4cc5b8;
+	color: white;
+	border: none;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	transition: all 0.1s;
+	font-weight: bold;
+	opacity: 0.8;
 }
 .card-list-container .avatar .name .username .website .button {
 	padding: 20px;
